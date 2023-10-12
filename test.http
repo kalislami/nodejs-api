@@ -1,0 +1,153 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "lamak",
+  "password" : "lamak123",
+  "name" : "M Kamaluddien A"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/remove/username
+Content-Type: application/json
+Accept: application/json
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "lamak",
+  "password" : "lamak123"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 4477c0b5-d603-47ef-a90d-8a507266f480
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 4477c0b5-d603-47ef-a90d-8a507266f480
+
+{
+  "name" : "Kamaludien"
+}
+
+###
+
+DELETE   http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 1120ea2e-a084-47ed-a3d8-063743ab9250
+
+###
+
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+{
+  "first_name" : "Nufail",
+  "last_name" : "Labib",
+  "email" : "nufail@labib.com",
+  "phone" : "0812345678"
+}
+
+###
+
+GET http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+###
+
+GET http://localhost:3000/api/contacts/589
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+### Update
+
+PUT http://localhost:3000/api/contacts/589
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+{
+  "first_name": "Misyal",
+  "last_name": "Khawarizmi",
+  "email": "misyal@alhusain.com",
+  "phone": "0821212123"
+}
+
+### Delete Contact
+
+DELETE http://localhost:3000/api/contacts/589
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+### Create Address
+
+POST http://localhost:3000/api/contacts/590/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+{
+  "street" : "Kantor",
+  "city" : "Jakarta",
+  "province" : "DKI JAKARTA",
+  "country" : "Indonesia",
+  "postal_code" : "123456"
+}
+
+
+### List Addresses
+
+GET http://localhost:3000/api/contacts/590/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+
+### Get Address
+
+GET http://localhost:3000/api/contacts/590/addresses/79
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+### Update Address
+
+PUT http://localhost:3000/api/contacts/590/addresses/79
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
+
+{
+  "street" : "Kantor Bekerja",
+  "city" : "Bekasi",
+  "province" : "Jawa Barat",
+  "country" : "Indonesia",
+  "postal_code" : "324234"
+}
+
+### Remove Address
+
+DELETE http://localhost:3000/api/contacts/590/addresses/80
+Content-Type: application/json
+Accept: application/json
+Authorization: ca752e80-86d8-435e-a95f-dc9f49d6b5a6
